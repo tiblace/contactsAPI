@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 //Connect to the mongoDB
-mongoose.connect('mongodb://localhost/contacts');
+mongoose.connect('mongodb://localhost/contacts', {useNewUrlParser: true});
 var db = mongoose.connection;
 
 // Setup server port
